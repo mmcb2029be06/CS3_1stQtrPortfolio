@@ -1,20 +1,39 @@
 <body>
-    <h1>Enter your age<h1>
-    <input type="text" id="age" name="Age"><br><br>
-    <input type="button" id="agebutton" name="agebutton", value = "ENTER"><br><br>
+    <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">FEED ME FOOD</h1>
+
+    <label for="age" style="font-family: cursive;">
+        Enter your age
+        <input type="text" id="age" name="Age"><br>
+    </label>
+    <br>
+    <label for="maxage" style="font-family: cursive;">
+        Enter your life expectancy
+        <input type="text" id="maxage" name="maxAge"><br>
+    </label>
+    <br>
+    <label for="perday" style="font-family: cursive;">
+        Enter how many bowls of champorado you will per day
+        <input type="text" id="perday" name="perDay"><br>
+    </label>
+
     
-    
-    <h1>Enter your life expectancy<h1>
-    <input type="text" id="mxage" name="Maxiumum Age"><br><br>
-    <input type="button" id="mxagebutton" name="mxagebutton", value = "ENTER"><br><br>
-    
-    
-    <h1>Enter how many bowls of champorado you will eat<h1>
-    <input type="text" id="perday" name="Bowls Per Day of Champorado"><br><br>
-    <input type="button" id="perdaybutton" name="perdaybutton", value = "ENTER"><br><br>
+    <p id="result" style="font-family: 'Courier New', Courier, monospace;">Result:</p>
+    <button onclick="getData()"> Accept Data </button>
+    <script> 
+        function getData(){
+            
+                let AGE = document.getElementById("age").value;
+                let MAXAGE = document.getElementById("maxage").value;
+                let PERDAY = document.getElementById("perday").value; 
+                let sure = window.confirm("ARE YOU SURE WITH YOUR NUMBERS???");
+                if (sure){
+                    let totalRequired = (Number(PERDAY) * 365) * (Number(MAXAGE)) - (Number(AGE));
+                    result.innerHTML = "Result: You will need " + totalRequired + " bowls of champorado to last you until the ripe age of " + Number(MAXAGE);
+                }
+            
+        }
+    </script>
     
 </body>
-
-<script src="script.js">
 
 </script>
