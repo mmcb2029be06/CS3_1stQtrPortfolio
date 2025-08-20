@@ -1,0 +1,44 @@
+<body>
+    <h2> Q1 3rd Graded Exercise submitted by Marcus Carandang of 9Beryllium </h2>
+
+    <label for="mp" style="font-family: cursive;">
+        Enter Meal Price
+        <input type="text" id="mp" name="Age"><br>
+    </label>
+    <br>
+    <label for="tip" style="font-family: cursive;">
+        Enter Tip Price
+        <input type="text" id="tip" name="maxAge"><br>
+    </label>
+    <br>
+    <label for="sc" style="font-family: cursive;">
+        Enter Service Charge
+        <input type="text" id="sc" name="perDay"><br>
+    </label>
+
+    
+    <p id="result" style="font-family: 'Courier New', Courier, monospace;">Total Price:</p>
+    <button onclick="getData()"> Accept Input </button>
+    <script> 
+        function getData(){
+            
+                let mp = document.getElementById("mp").value;
+                let tip = document.getElementById("tip").value;
+                let sc = document.getElementById("sc").value; 
+                let totalCost;
+                let sure = window.confirm("ARE YOU SURE WITH YOUR NUMBERS???");
+                if (sure){
+                    
+                    let totalCost = mp + tip + (sc / 100 * mp);
+                    let num = totalCost;
+                    result.innerHTML = "Total Price: " + num;
+                }
+            
+        }
+    </script>
+
+    <footer>
+        W3Schools.com. (n.d.). https://www.w3schools.com/jsref/jsref_tofixed.asp
+    </footer>
+    
+</body>
